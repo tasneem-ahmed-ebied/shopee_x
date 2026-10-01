@@ -29,7 +29,9 @@ class HeightManager {
   static double h29 = 29.h;
   static double h30 = 30.h;
   static double h34 = 34.h;
+  static double h35 = 35.h;
   static double h36 = 36.h;
+  static double h37 = 37.h;
   static double h40 = 40.h;
   static double h42 = 42.h;
   static double h45 = 45.h;
@@ -60,6 +62,7 @@ class HeightManager {
   static double h230 = 230.h;
   static double h240 = 240.h;
   static double h250 = 250.h;
+  static double h255 = 255.h;
   static double h270 = 270.h;
   static double h280 = 280.h;
   static double h300 = 300.h;

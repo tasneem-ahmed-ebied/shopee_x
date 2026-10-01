@@ -5,7 +5,10 @@ class WidthManagers {
 
   static double w2 = 2.w;
   static double w4 = 4.w;
+  static double w5 = 5.w;
+  static double w6 = 6.w;
   static double w8 = 8.w;
+  static double w9 = 9.w;
   static double w10 = 10.w;
   static double w13 = 13.w;
   static double w15 = 15.w;

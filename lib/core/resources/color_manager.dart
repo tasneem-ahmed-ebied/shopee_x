@@ -5,6 +5,9 @@ class ColorsManager {
 
 
   static const Color white = Color(0xffffffff);
+  static const Color semiDart = Color(0xFF1E1E1E);
+  static const Color darkBlack = Color(0xFF000B19);
+  static const Color blue = Color(0xFF20B9F0);
   static const Color white12 = Color(0x1FFFFFFF);
   static const Color white24 = Color(0x3DFFFFFF);
   static const Color white70 = Color(0xB3FFFFFF);

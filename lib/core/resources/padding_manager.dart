@@ -1,20 +1,6 @@
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
-class HorizontalPaddingManager {
-  HorizontalPaddingManager._();
 
-  static double p5 = 5.w;
-  static double p8 = 8.w;
-  static double p10 = 10.w;
-  static double p12 = 12.w;
-  static double p16 = 16.w;
-  static double p20 = 20.w;
-  static double p24 = 24.w;
-  static double p32 = 32.w;
-  static double p40 = 40.w;
-  static double p50 = 50.w;
-  static double p60 = 60.w;
-}
 class PaddingManager {
 PaddingManager._();
 
@@ -31,24 +17,6 @@ PaddingManager._();
   static double p40 = 40.r;
   static double p50 = 50.r;
   static double p60 = 60.r ;
+  static double p80 = 80.r ;
   static double p100 = 100.r ;
-}
-
-class VerticalPaddingManager {
-  VerticalPaddingManager._();
-
-  static double p5 = 5.h;
-  static double p8 = 8.h;
-  static double p10 = 10.h;
-  static double p12 = 12.h;
-  static double p15 = 15.h;
-  static double p16 = 16.h;
-  static double p20 = 20.h;
-  static double p24 = 24.h;
-  static double p32 = 32.h;
-  static double p36 = 36.h;
-  static double p40 = 40.h;
-  static double p50 = 50.h;
-  static double p100 = 100.h;
-  static double p200 = 200.h;
 }
