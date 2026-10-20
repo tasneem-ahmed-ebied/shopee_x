@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(number) => "number of room is : ${number} ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -47,10 +49,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Beautiful eCommerce UI Kit for your online store",
     ),
     "next": MessageLookupByLibrary.simpleMessage("next"),
+    "numberOfRoom": m0,
     "skip": MessageLookupByLibrary.simpleMessage("skip"),
     "startAppTextButton": MessageLookupByLibrary.simpleMessage(
       "Let\'s get started",
     ),
+    "sub1": MessageLookupByLibrary.simpleMessage("1"),
+    "sub2": MessageLookupByLibrary.simpleMessage("2"),
+    "t1": MessageLookupByLibrary.simpleMessage("غرفة 1"),
+    "t2": MessageLookupByLibrary.simpleMessage("عنوان2"),
     "title1onbourding": MessageLookupByLibrary.simpleMessage(
       "Discover Amazing Products",
     ),
@@ -67,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Save Your Favorites",
     ),
     "title6onbourding": MessageLookupByLibrary.simpleMessage(
-      "Ready to Start Shopping?",
+      "Ready to Start Shopping!",
     ),
   };
 }

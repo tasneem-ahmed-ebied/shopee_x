@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../../controller/onbourding_page_controller.dart';
 import '../../../../core/resources/color_manager.dart';
 import '../../../../core/resources/const_value_manager.dart';
+import '../../../../core/resources/context_extensions.dart';
 import '../../../../core/resources/height_manager.dart';
 import '../../../../core/resources/radius_manager.dart';
-import '../../../../core/resources/utils.dart';
 import '../../../../core/resources/width_manager.dart';
 import '../../../../view/widgets/main_press_button.dart';
 import '../widget/on_bourding_widgets.dart';
@@ -24,10 +24,23 @@ class _OnbourdingState extends State<OnBourdingPage> {
   late PageController _pageController;
   late StreamSubscription<int> _nextPageSubscription;
   double _currentPage = 0;
+ late StreamController<int> pipe;
+  late Sink<int> input;
+  late Stream<int> output;
 
+void  init() {
+    pipe = StreamController<int>();
+    input = pipe.sink;
+    output = pipe.stream;
+  }
+
+  void chanageNumber() {
+    input.add(1);
+  }
   @override
   void initState() {
     super.initState();
+    init();
     _controller = OnbourdingPagesController(context: context);
     _pageController = PageController();
     _pageController.addListener(() {
@@ -63,9 +76,14 @@ class _OnbourdingState extends State<OnBourdingPage> {
     _controller.skipPage();
   }
 
+  late final listOnboarding = ConstValueManager.listOnbourdingPageModel(
+    context,
+  );
+  late final int pageCount = listOnboarding.length;
+
   @override
   Widget build(BuildContext context) {
-    final int pageCount = ConstValueManager.listOnbourdingPageModel(context).length;
+    print("============build===========");
     return Scaffold(
       backgroundColor: ColorsManager.black,
       body: SafeArea(
@@ -87,8 +105,9 @@ class _OnbourdingState extends State<OnBourdingPage> {
                   onPageChanged: _onPageChanged,
                   itemBuilder: (BuildContext context, int pageIndex) {
                     return OnBourdingPageItem(
-                      pageModel:
-                          ConstValueManager.listOnbourdingPageModel(context)[pageIndex],
+                      pageModel: ConstValueManager.listOnbourdingPageModel(
+                        context,
+                      )[pageIndex],
                     );
                   },
                 ),
@@ -97,15 +116,26 @@ class _OnbourdingState extends State<OnBourdingPage> {
               SizedBox(height: HeightManager.h22),
               MainPressButton(
                 text: _controller.index >= pageCount - 1
-                    ? Utils.letsGetStarted
-                    : Utils.next,
+                    ? context.translation.startAppTextButton
+                    : context.translation.next,
                 onTap: _onNextPressed,
                 backGroundColor: ColorsManager.black,
                 textColor: ColorsManager.white,
               ),
+              ElevatedButton(
+                onPressed: () {
+                 chanageNumber();
+                },
+                child: StreamBuilder(
+                  stream: output,
+                  builder: (context, snapchot) {
+                    return Text("${snapchot.data}");
+                  }
+                ),
+              ),
               SizedBox(height: HeightManager.h8),
               MainPressButton(
-                text: Utils.skip,
+                text: context.translation.skip,
                 onTap: _onSkipPressed,
                 backGroundColor: ColorsManager.white,
                 textColor: ColorsManager.black,
@@ -118,3 +148,10 @@ class _OnbourdingState extends State<OnBourdingPage> {
     );
   }
 }
+ 
+ //onboarding with translation
+ //switch (intl + sharedpref)
+ //extensions
+ //variable with localiation
+ //use in switch lang => stream builder
+ 

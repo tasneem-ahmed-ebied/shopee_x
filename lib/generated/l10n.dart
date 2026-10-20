@@ -195,10 +195,10 @@ class Translate {
     );
   }
 
-  /// `Ready to Start Shopping?`
+  /// `Ready to Start Shopping!`
   String get title6onbourding {
     return Intl.message(
-      'Ready to Start Shopping?',
+      'Ready to Start Shopping!',
       name: 'title6onbourding',
       desc: '',
       args: [],
@@ -213,6 +213,36 @@ class Translate {
       desc: '',
       args: [],
     );
+  }
+
+  /// `number of room is : {number} `
+  String numberOfRoom(int number) {
+    return Intl.message(
+      'number of room is : $number ',
+      name: 'numberOfRoom',
+      desc: '',
+      args: [number],
+    );
+  }
+
+  /// `غرفة 1`
+  String get t1 {
+    return Intl.message('غرفة 1', name: 't1', desc: '', args: []);
+  }
+
+  /// `عنوان2`
+  String get t2 {
+    return Intl.message('عنوان2', name: 't2', desc: '', args: []);
+  }
+
+  /// `1`
+  String get sub1 {
+    return Intl.message('1', name: 'sub1', desc: '', args: []);
+  }
+
+  /// `2`
+  String get sub2 {
+    return Intl.message('2', name: 'sub2', desc: '', args: []);
   }
 }
 

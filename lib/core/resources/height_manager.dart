@@ -51,6 +51,7 @@ class HeightManager {
   static double h111 = 111.h;
   static double h124 = 124.h;
   static double h140 = 140.h;
+  static double h145 = 145.h;
   static double h150 = 150.h;
   static double h165 = 165.h;
   static double h171 = 171.h;

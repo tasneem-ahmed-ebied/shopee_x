@@ -20,10 +20,7 @@ class OnbourdingPagesController {
 
   OnbourdingPagesController({
     required this.context,
-  }) {
-    onbourdingPageModel =
-    ConstValueManager.listOnbourdingPageModel(context)[index];
-  }
+  });
 
   void nextPage() {
     final pages = ConstValueManager.listOnbourdingPageModel(context);

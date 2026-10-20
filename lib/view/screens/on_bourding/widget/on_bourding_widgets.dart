@@ -1,6 +1,5 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:shopee_x/generated/l10n.dart';
 
 import '../../../../core/resources/color_manager.dart';
 import '../../../../core/resources/font_manager.dart';
@@ -82,3 +81,4 @@ class OnBourdingDots extends StatelessWidget {
     );
   }
 }
+

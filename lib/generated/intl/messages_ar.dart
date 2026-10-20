@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(number) => "رقم الغرفه هو ${number} ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -47,8 +49,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "واجهة متجر إلكتروني جميلة لمتجرك الإلكتروني",
     ),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "numberOfRoom": m0,
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "startAppTextButton": MessageLookupByLibrary.simpleMessage("هيا نبدأ"),
+    "sub1": MessageLookupByLibrary.simpleMessage("Sub1"),
+    "sub2": MessageLookupByLibrary.simpleMessage("Sub2"),
+    "t1": MessageLookupByLibrary.simpleMessage("T1"),
+    "t2": MessageLookupByLibrary.simpleMessage("T2"),
     "title1onbourding": MessageLookupByLibrary.simpleMessage(
       "اكتشف منتجات رائعة",
     ),
